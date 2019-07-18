@@ -1,0 +1,13 @@
+module CorbaServerInterface
+{
+  interface CorbaServerInterface
+  {
+    string addItem(in string userId,in string itemId,in string itemName, in long quantity);
+    string deleteItem(in string userId,in string itemId,in long quantity);
+    string listItemAvailability(in string userId);
+    string borrowItem(in string userId,in string itemId, in long no_days);
+    string findItem(in string userId,in string itemName);
+    string returnItem(in string userId,in string itemId);
+    string exchangeItems(in string userId, in string newItemId, in string oldItemId );
+   };
+};
